@@ -1,6 +1,7 @@
 #get_triangleメソッドを定義
 def get_triangle(base,height)
-  base * height / 2.0
+  kekka = base * height / 2.0
+  return kekka
 end
 
 #get_triangleメソッドを呼び出す
