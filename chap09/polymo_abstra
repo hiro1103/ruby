@@ -1,0 +1,37 @@
+class Figure
+  def initialize(width,height)
+    @width = width
+    @height = height
+  end
+
+  #面積を取得
+  def get_area
+    raise NotImplementedError,"Not Implemented:#{__method__}"
+  end
+end
+
+class Traiangle < Figure
+  #三角形の面積を求めるためのget_areaメソッドを定義
+  def get_area
+    @width * @height / 2
+  end
+end
+
+class Ractangle < Figure
+  #四角形の面積を求めるためのget_areaメソッドを定義
+  def get_area
+    @width * @height
+  end
+end
+
+#Figure派生クラスの配列
+figs = [
+  Traiangle.new(10, 15),
+  Ractangle.new(10, 15),
+  Traiangle.new(15, 10)
+]
+
+#Figure配列から順に面積を取得
+figs.each do |fig|
+  puts fig.get_area if fig.is_a?(Figure)
+end
