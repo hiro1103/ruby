@@ -19,6 +19,12 @@ class BussinessPerson < Person
   end
 end
 
-bps = BussinessPerson.new("山田太郎",35)
-bps.show
-bps.work
+class EliteBusinessPerson < BussinessPerson
+  def work
+    puts "#{name}、#{age}歳はバリバリ働いています。"
+  end
+end
+
+ebps = EliteBusinessPerson.new("山田太郎", 35)
+ebps.work
+ebps.show
