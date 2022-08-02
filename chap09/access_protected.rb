@@ -1,0 +1,18 @@
+class MyClass
+  attr_accessor:value
+  protected :value=
+
+  def initialize(value)
+    self.value = value
+  end
+
+  #インスタンス変数valueの値を入れ替え
+  def swap(other)
+    self.value,other.value=other.value,self.value
+  end
+end
+
+c1 = MyClass.new(5)
+c2 = MyClass.new(3)
+c1.swap(c2)
+p c1,c2
